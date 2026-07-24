@@ -1,19 +1,28 @@
-import products from "../../data/productdata"
+import productdata from "../../data/productmock"
 
 function ProductCard() {
   return (
    <>
-    <div>
-      {products.map((productdetails)=>
-      (<div key={productdetails.id}>
-        <p>The name of product:{productdetails.name}</p>
-        <img src={productdetails.image} alt={productdetails.name} />
-        <span>${productdetails.price.toFixed(2)}</span>
-        <p>{productdetails.description}</p>
-        <p>Available Sizes: {productdetails.size.join(", ")}</p>
-      </div>))}
-     </div>
-     </>
+      <div>
+        {productdata.map((item)=>{
+          return (
+            <div key={item.id}>
+              <h2 >{item.name}</h2>
+              <p>{item.price}</p>
+              <p>{item.instock}</p>
+              <p>{item.description}</p>
+              <p>{item.size}</p>
+              <p>{item.color}</p>
+              <p>{item.fabric}</p>
+              <p>{item.fit}</p>
+              <p>{item.care}</p>
+      
+            </div>
+          );
+        })}
+      </div>
+   
+   </>
   )
 }
 

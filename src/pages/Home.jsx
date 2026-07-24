@@ -1,17 +1,30 @@
-import ProductCard from '../components/ui/ProductCard';
+import img01 from "../assets/productimages/img01.png"
+import ProductCard from "../components/ui/ProductCard"
+
+
+
 function Home() {
- 
-//create an array products with 5 objects each object should have id,name,price,image and description 
-// properties and display them in a grid using map function and display the name of the product in a p 
-// tag and the image in an img tag and the price in a span tag and the description in a p tag
-
-
- 
   return (
-    <>
-<ProductCard/>
-    </>
-  
+  <>
+  <div className="Homepage">
+    <button className="primary-btn">Explore Collection</button>
+    <img src={img01} alt="Product" />
+
+    <button className="primary-btn">Explore Collection</button>
+    
+    <div>
+      <div className="flex items-center justify-between text-4xl">
+        <h1>Best Sellers </h1>
+
+      </div>
+      <div>
+        <ProductCard/>
+
+      </div>
+   
+    </div>
+  </div>
+  </>
   )
 }
 
